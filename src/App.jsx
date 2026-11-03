@@ -8,7 +8,6 @@ import ProjectsPage from './pages/ProjectsPage';
 import BusinessPage from './pages/BusinessPage';
 import CareersPage from './pages/CareersPage';
 import AboutUsPage from './pages/AboutUsPage';
-import AwardsPage from './pages/AwardsPage';
 import ContactPage from './pages/ContactPage';
 import NewsPage from './pages/NewsPage';
 import NewsDetail from './pages/NewsDetail';
@@ -86,7 +85,7 @@ function App() {
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/businesses/:slug" element={<BusinessPage />} />
             <Route path="/careers" element={<CareersPage />} />
-            <Route path="/awards-achievements" element={<AwardsPage />} />
+            {/* /awards-achievements hidden for now (pages/AwardsPage.jsx kept); falls through to the redirect below */}
             <Route path="/news" element={<NewsPage />} />
             <Route path="/news/:slug" element={<NewsDetail />} />
             <Route path="/contact-us" element={<ContactPage />} />

@@ -19,6 +19,5 @@ export const footerLinks = {
   connect: { title: 'Connect', links: [
     { label: 'Contact Us', href: '/contact-us' },
     { label: 'Careers', href: '/careers' },
-    { label: 'Achievements', href: '/awards-achievements' },
   ]},
 };
