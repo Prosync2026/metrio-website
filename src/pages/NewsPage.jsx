@@ -89,9 +89,6 @@ const NewsPage = () => {
       <section className="py-16 md:py-20 bg-white">
         <div className="container-metrio">
           <ScrollReveal className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link to="/awards-achievements" className="btn-primary group">
-              View Achievements
-            </Link>
             <Link to="/" className="btn-secondary">
               <ArrowLeft size={14} />
               Back to Home

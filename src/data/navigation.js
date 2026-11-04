@@ -31,12 +31,9 @@ export const rightLinks = [
     ],
   },
   {
-    label: 'Media & Achievements',
-    href: '/awards-achievements',
-    children: [
-      { label: 'News', href: '/news' },
-      { label: 'Achievements', href: '/awards-achievements' },
-    ],
+    /* Achievements hidden for now; restore as a child link when it has content */
+    label: 'Media',
+    href: '/news',
   },
   {
     label: 'Contact Us',
