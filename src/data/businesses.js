@@ -107,12 +107,12 @@ export const businesses = [
       {
         title: 'Retail Leasing & Tenant Mix',
         desc: 'We curate tenant mixes that balance variety, relevance and footfall — built to keep destinations active and growing.',
-        image: asset('/images/mrdiy-metrioplace.png'),
+        image: asset('/images/mrdiy-metrioplace.webp'),
       },
       {
         title: 'Asset & Facility Management',
         desc: 'We manage day-to-day operations, maintenance and tenant relations to keep every retail space running smoothly.',
-        image: asset('/images/businesses/retail.png'),
+        image: asset('/images/businesses/retail.webp'),
       },
       {
         title: 'Marketing & Footfall Strategy',
@@ -165,7 +165,7 @@ export const businesses = [
       {
         title: 'IBS Construction',
         desc: 'We apply Industrialised Building System methods to improve build quality, reduce on-site variability and accelerate project timelines.',
-        image: asset('/images/businesses/construction.png'),
+        image: asset('/images/businesses/construction.webp'),
       },
       {
         title: 'Digitally Coordinated Delivery',
@@ -223,12 +223,12 @@ export const businesses = [
       {
         title: 'Formwork Design & Fabrication',
         desc: "We design and fabricate aluminium formwork systems tailored to each project's structural layout and timeline.",
-        image: asset('/images/businesses/formwork.png'),
+        image: asset('/images/businesses/formwork.webp'),
       },
       {
         title: 'System Supply & Rental',
         desc: 'We provide flexible supply and rental options, giving contractors access to quality formwork without the full capital outlay.',
-        image: asset('/images/businesses/construction.png'),
+        image: asset('/images/businesses/construction.webp'),
       },
       {
         title: 'On-Site Technical Support',
@@ -286,7 +286,7 @@ export const businesses = [
       {
         title: 'BIM Implementation',
         desc: 'We work alongside construction teams and developers to adopt BIM workflows, standards and processes — building the systems and culture needed for digital project delivery.',
-        image: asset('/images/businesses/digital.png'),
+        image: asset('/images/businesses/digital.webp'),
       },
       {
         title: 'Construction Technology Consulting',
@@ -296,7 +296,7 @@ export const businesses = [
       {
         title: 'Digital Construction Systems',
         desc: 'We deliver purpose-built digital systems specialised for the construction industry — including defect management and time management systems, increasingly supported by AI to surface risks and progress insights in real time.',
-        image: asset('/images/businesses/construction.png'),
+        image: asset('/images/businesses/construction.webp'),
       },
     ],
     advantagesImage: asset('/images/businesses/digital-backdrop.jpg'),

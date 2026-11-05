@@ -7,6 +7,7 @@ import MapPanel from '../components/ProjectMap/MapPanel';
 import ProjectCard from '../components/ProjectMap/ProjectCard';
 import { regions } from '../data/projects';
 import { asset } from '../utils/asset';
+import useSeo from '../utils/useSeo';
 
 /* ─── Helpers ─── */
 const isOnGoing = (status) => status !== 'Completed';
@@ -74,17 +75,10 @@ const ProjectsPage = () => {
     return () => clearTimeout(settle);
   }, [activeProject]);
 
-  /* SEO meta */
-  useEffect(() => {
-    document.title = 'Projects | Metrio Group';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        'content',
-        "Explore Metrio Group's on-going and completed property and commercial development projects across Northern and Central Malaysia."
-      );
-    }
-  }, []);
+  useSeo({
+    title: 'Projects | Metrio Group',
+    description: "Explore Metrio Group's on-going and completed property and commercial development projects across Northern and Central Malaysia.",
+  });
 
   const displayRegions = useMemo(() => regionsFor(viewMode), [viewMode]);
 

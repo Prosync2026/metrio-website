@@ -1,10 +1,10 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import { businesses } from '../data/businesses';
 import useBackLink from '../utils/useBackLink';
+import useSeo from '../utils/useSeo';
 
 const BusinessPage = () => {
   const { slug } = useParams();
@@ -12,15 +12,8 @@ const BusinessPage = () => {
   /* Back to wherever the business was opened from (home grid or About Us) */
   const back = useBackLink({ '/': 'Back to Home', '/about-us': 'Back to About Us', default: 'Back to Home' });
 
-  /* SEO meta is set below; scrolling is handled by ScrollManager in App */
-
-  /* Set SEO meta */
-  useEffect(() => {
-    if (!biz) return;
-    document.title = biz.seo.title;
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.setAttribute('content', biz.seo.description);
-  }, [biz]);
+  /* Scrolling is handled by ScrollManager in App */
+  useSeo({ title: biz?.seo.title, description: biz?.seo.description, image: biz?.image });
 
   if (!biz) return <Navigate to="/" replace />;
 

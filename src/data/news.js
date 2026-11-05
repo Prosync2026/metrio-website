@@ -12,7 +12,7 @@ export const articles = [
 MR.DIY's arrival adds another trusted name to MetrioPlace's growing retail line-up, strengthening its position as a go-to lifestyle and retail destination for the Batu Kawan community. This milestone reflects Metrio Group's continued commitment to curating a retail experience that serves everyday needs while enriching the communities it operates in.
 
 Guided by our Synergy value, Metrio Group remains focused on building beneficial partnerships that bring lasting value to our tenants, shoppers and the wider community.`,
-    image: asset("/images/mrdiy-metrioplace.png"), 
+    image: asset("/images/mrdiy-metrioplace.webp"), 
     slug: "mrdiy-arrives-at-metrioplace"
   },
   {

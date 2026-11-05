@@ -5,6 +5,7 @@ import { ArrowLeft, Building2, Home, Store, HardHat, Layers, Cpu } from 'lucide-
 import ScrollReveal from '../components/ui/ScrollReveal';
 import ValuesSection from '../components/ValuesSection';
 import { asset } from '../utils/asset';
+import useSeo from '../utils/useSeo';
 
 /* ─── Anchor definitions for sticky sub-nav ─── */
 const anchors = [
@@ -87,17 +88,10 @@ const SubNav = ({ activeAnchor }) => {
 const AboutUsPage = () => {
   const [activeAnchor, setActiveAnchor] = useState(anchors[0].id);
 
-  /* SEO meta */
-  useEffect(() => {
-    document.title = 'About Us | Metrio Group';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        'content',
-        "Learn about Metrio Group's story, foundation, values and corporate structure — a Malaysian construction and property group built on three decades of delivery."
-      );
-    }
-  }, []);
+  useSeo({
+    title: 'About Us | Metrio Group',
+    description: "Learn about Metrio Group's story, foundation, values and corporate structure — a Malaysian construction and property group built on three decades of delivery.",
+  });
 
   /* Intersection Observer for active anchor tracking */
   useEffect(() => {

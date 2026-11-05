@@ -6,6 +6,7 @@ import ScrollReveal from '../components/ui/ScrollReveal';
 import ApplyDialog from '../components/Careers/ApplyDialog';
 import { openings } from '../data/careers';
 import { asset } from '../utils/asset';
+import useSeo from '../utils/useSeo';
 
 const JobCard = ({ job, index, onApply }) => (
   <ScrollReveal delay={index * 0.06}>
@@ -44,6 +45,12 @@ const CareersPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [applyingFor, setApplyingFor] = useState(null);
   const closeApply = useCallback(() => setApplyingFor(null), []);
+
+  useSeo({
+    title: 'Careers | Metrio Group',
+    description:
+      'Join Metrio Group. Explore open positions across property development, construction, retail and digital construction in Penang and the Klang Valley.',
+  });
 
   const filteredOpenings = openings.filter(
     (job) =>

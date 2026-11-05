@@ -1,4 +1,3 @@
- import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, Phone, Mail, MapPin, Briefcase, Clock, Building2 } from 'lucide-react';
@@ -6,6 +5,7 @@ import ScrollReveal from '../components/ui/ScrollReveal';
 import { openings } from '../data/careers';
 import klOfficePhoto from '../assets/images/kl-office.jpg';
 import { asset } from '../utils/asset';
+import useSeo from '../utils/useSeo';
 
 const offices = [
   {
@@ -25,17 +25,10 @@ const offices = [
 ];
 
 const ContactPage = () => {
-  /* SEO meta */
-  useEffect(() => {
-    document.title = 'Contact Us | Metrio Group';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        'content',
-        'Get in touch with Metrio Group — Northern and Central Malaysia offices.'
-      );
-    }
-  }, []);
+  useSeo({
+    title: 'Contact Us | Metrio Group',
+    description: 'Get in touch with Metrio Group — Northern and Central Malaysia offices.',
+  });
 
   return (
     <div className="min-h-screen bg-white">

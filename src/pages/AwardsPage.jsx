@@ -1,9 +1,9 @@
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Award, Trophy, Star } from 'lucide-react';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import { asset } from '../utils/asset';
+import useSeo from '../utils/useSeo';
 
 /* 📌 Placeholder award items — content to be populated by Allison */
 const placeholderAwards = [
@@ -16,17 +16,10 @@ const placeholderAwards = [
 ];
 
 const AwardsPage = () => {
-  /* SEO meta */
-  useEffect(() => {
-    document.title = 'Achievements | Metrio Group';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        'content',
-        "Metrio Group's track record of industry recognition, certifications and achievements across property, construction and innovation."
-      );
-    }
-  }, []);
+  useSeo({
+    title: 'Achievements | Metrio Group',
+    description: "Metrio Group's track record of industry recognition, certifications and achievements across property, construction and innovation.",
+  });
 
   return (
     <div className="min-h-screen bg-white">
@@ -34,7 +27,7 @@ const AwardsPage = () => {
       <div className="relative overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center scale-105"
-          style={{ backgroundImage: `url(${asset('/images/hero/slide-2.png')})` }}
+          style={{ backgroundImage: `url(${asset('/images/hero/slide-2.webp')})` }}
         />
         <div className="absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-black/40 to-transparent z-[1]" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/60 to-black/30" />
