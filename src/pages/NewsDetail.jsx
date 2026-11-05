@@ -1,10 +1,10 @@
-import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, ArrowUpRight, Calendar } from 'lucide-react';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import { articles } from '../data/news';
 import useBackLink from '../utils/useBackLink';
+import useSeo from '../utils/useSeo';
 
 const NewsDetail = () => {
   const { slug } = useParams();
@@ -12,15 +12,11 @@ const NewsDetail = () => {
   /* Back to wherever the article was opened from (home or News page) */
   const back = useBackLink({ '/': 'Back to Home', '/news': 'Back to News', default: 'Back to Home' });
 
-  /* Set SEO meta */
-  useEffect(() => {
-    if (!article) return;
-    document.title = article.metaTitle || `${article.title} | Metrio Group`;
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute('content', article.metaDescription || article.excerpt);
-    }
-  }, [article]);
+  useSeo({
+    title: article && (article.metaTitle || `${article.title} | Metrio Group`),
+    description: article && (article.metaDescription || article.excerpt),
+    image: article?.image,
+  });
 
   if (!article) {
     return (

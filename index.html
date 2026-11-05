@@ -4,13 +4,62 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Defaults for the home page. Each route's useSeo() replaces these, and
+         the build-time prerender bakes the result into that route's HTML. -->
     <title>Metrio Group — Building Timeless Quality</title>
-    <meta name="description" content="Metrio Group is a diversified Malaysian conglomerate spanning property development, construction, retail, and digital innovation. Building timeless quality since 1993." />
-    <meta name="keywords" content="Metrio Group, property development, construction, Penang, Malaysia, MetrioPlace, Forescape, Beverly Heights" />
-    <meta property="og:title" content="Metrio Group — Building Timeless Quality" />
-    <meta property="og:description" content="A diversified Malaysian conglomerate building timeless quality across property, construction, retail, and digital innovation." />
+    <meta name="description" content="Metrio Group is a Malaysian construction and property group delivering quality across property development, construction, retail, aluminium formwork and digital construction solutions." />
+    <link rel="canonical" href="https://metrio.com.my/" />
+    <meta property="og:site_name" content="Metrio Group" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://metriogroup.com" />
+    <meta property="og:locale" content="en_MY" />
+    <meta property="og:title" content="Metrio Group — Building Timeless Quality" />
+    <meta property="og:description" content="Metrio Group is a Malaysian construction and property group delivering quality across property development, construction, retail, aluminium formwork and digital construction solutions." />
+    <meta property="og:url" content="https://metrio.com.my/" />
+    <meta property="og:image" content="https://metrio.com.my/images/og-default.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Metrio Group",
+        "url": "https://metrio.com.my/",
+        "logo": "https://metrio.com.my/images/metrio-logo.png",
+        "email": "info@metrio.com.my",
+        "description": "Malaysian construction and property group spanning property development, construction engineering, retail management, aluminium formwork and digital construction solutions.",
+        "address": [
+          {
+            "@type": "PostalAddress",
+            "name": "Northern Office",
+            "streetAddress": "22A, Jalan Perniagaan Vorteks 3, Pusat Perniagaan Vorteks",
+            "addressLocality": "Simpang Ampat",
+            "postalCode": "14100",
+            "addressRegion": "Penang",
+            "addressCountry": "MY"
+          },
+          {
+            "@type": "PostalAddress",
+            "name": "Central Office",
+            "streetAddress": "No. 129 & No. 131, Jalan Kenari 23A, Bandar Puchong Jaya",
+            "addressLocality": "Puchong",
+            "postalCode": "47100",
+            "addressRegion": "Selangor",
+            "addressCountry": "MY"
+          }
+        ],
+        "contactPoint": [
+          { "@type": "ContactPoint", "contactType": "customer service", "areaServed": "MY", "telephone": "+604-589 9887", "name": "Northern Office" },
+          { "@type": "ContactPoint", "contactType": "customer service", "areaServed": "MY", "telephone": "+603-8075 0992", "name": "Central Office" }
+        ],
+        "subOrganization": [
+          { "@type": "Organization", "name": "Metrio Development" },
+          { "@type": "Organization", "name": "MetrioPlace" },
+          { "@type": "Organization", "name": "Alunan Asas" },
+          { "@type": "Organization", "name": "Myform" },
+          { "@type": "Organization", "name": "Prosync" }
+        ]
+      }
+    </script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

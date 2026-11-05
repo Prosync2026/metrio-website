@@ -38,9 +38,13 @@ jobs:
           BASE_PATH: ${{ steps.pages.outputs.base_path }}/
           VITE_CARTO_API_KEY: ${{ secrets.VITE_CARTO_API_KEY }}
 
-      # Pages has no rewrite rules: serve the app for unknown paths so deep
-      # links like /about-us load instead of 404ing.
-      - run: cp dist/index.html dist/404.html
+      # Render every route to static HTML (dist/about-us.html etc.) so pages
+      # return 200 with real content and meta; also writes sitemap.xml,
+      # robots.txt and a noindex 404.html shell for unknown URLs.
+      - run: npx puppeteer browsers install chrome
+      - run: npm run prerender
+        env:
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}/
 
       - uses: actions/upload-pages-artifact@v3
         with:

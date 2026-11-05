@@ -59,7 +59,7 @@ export const regions = {
         type: 'Residential',
         location: 'Bukit Gambir, Penang Island',
         status: 'Completed',
-        image: asset('/images/projects/latest/beverly-heights.png'),
+        image: asset('/images/projects/latest/beverly-heights.webp'),
         coords: { lat: 5.3700, lng: 100.2900 },
       },
       {
@@ -67,7 +67,7 @@ export const regions = {
         type: 'Residential',
         location: 'Alma, Bukit Mertajam, Penang',
         status: 'Completed',
-        image: asset('/images/projects/latest/the-glades.png'),
+        image: asset('/images/projects/latest/the-glades.webp'),
         coords: { lat: 5.3175, lng: 100.2810 },
       },
       {
@@ -75,7 +75,7 @@ export const regions = {
         type: 'Residential',
         location: 'Bukit Mertajam, Penang',
         status: 'Completed',
-        image: asset('/images/projects/latest/taman-bukit-mas.png'),
+        image: asset('/images/projects/latest/taman-bukit-mas.webp'),
         coords: { lat: 5.3480, lng: 100.4520 },
       },
       {
@@ -83,7 +83,7 @@ export const regions = {
         type: 'Residential',
         location: 'Bukit Mertajam, Penang',
         status: 'Completed',
-        image: asset('/images/projects/latest/sri-gemilang.png'),
+        image: asset('/images/projects/latest/sri-gemilang.webp'),
         coords: { lat: 5.3460, lng: 100.4500 },
       },
       {
@@ -91,7 +91,7 @@ export const regions = {
         type: 'Residential',
         location: 'Juru, Prai, Penang',
         status: 'Completed',
-        image: asset('/images/projects/latest/villa-cendana.png'),
+        image: asset('/images/projects/latest/villa-cendana.webp'),
         coords: { lat: 5.3200, lng: 100.4350 },
       },
       {
@@ -99,7 +99,7 @@ export const regions = {
         type: 'Residential',
         location: 'Juru, Prai, Penang',
         status: 'Completed',
-        image: asset('/images/projects/latest/cendana-permai.png'),
+        image: asset('/images/projects/latest/cendana-permai.webp'),
         coords: { lat: 5.3180, lng: 100.4330 },
       },
       {
@@ -116,7 +116,7 @@ export const regions = {
         type: 'Commercial',
         location: 'Batu Kawan, Penang',
         status: 'Completed',
-        image: asset('/images/projects/latest/vortex-phase1.png'),
+        image: asset('/images/projects/latest/vortex-phase1.webp'),
         coords: { lat: 5.2120, lng: 100.4630 },
       },
       {
@@ -221,7 +221,7 @@ export const regions = {
         type: 'High-Rise',
         location: 'Sunsuria City',
         status: 'Completed',
-        image: asset('/images/projects/latest/tangerine-suites.png'),
+        image: asset('/images/projects/latest/tangerine-suites.webp'),
         coords: { lat: 2.9220, lng: 101.7820 },
       },
       {
@@ -245,7 +245,7 @@ export const regions = {
         type: 'High-Rise',
         location: 'Penang',
         status: 'Completed',
-        image: asset('/images/projects/latest/beverly-heights.png'),
+        image: asset('/images/projects/latest/beverly-heights.webp'),
         coords: { lat: 5.3500, lng: 100.3000 },
       },
     ],

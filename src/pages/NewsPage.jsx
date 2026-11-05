@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
@@ -6,19 +5,13 @@ import ScrollReveal from '../components/ui/ScrollReveal';
 import NewsCard from '../components/NewsHighlights/NewsCard';
 import { articles } from '../data/news';
 import { asset } from '../utils/asset';
+import useSeo from '../utils/useSeo';
 
 const NewsPage = () => {
-  /* SEO meta */
-  useEffect(() => {
-    document.title = 'News | Metrio Group';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        'content',
-        'The latest news and updates from across Metrio Group — property development, construction, retail and digital innovation.'
-      );
-    }
-  }, []);
+  useSeo({
+    title: 'News | Metrio Group',
+    description: 'The latest news and updates from across Metrio Group — property development, construction, retail and digital innovation.',
+  });
 
   return (
     <div className="min-h-screen bg-white">
